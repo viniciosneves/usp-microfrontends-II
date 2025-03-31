@@ -19,7 +19,15 @@
 
   <main>
     <route default>
-      <application name="@single-spa/welcome"></application>
+      <application name="@usp/mf-nav"></application>
+
+      <route path="produtos">
+        <application name="@usp/mf-produtos"></application>
+      </route>
+      
+      <route default>
+        <application name="@usp/mf-clientes"></application>
+      </route>
     </route>
   </main>
 </single-spa-router>

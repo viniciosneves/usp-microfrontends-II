@@ -15,7 +15,18 @@
   <script type="injector-importmap">
     {
       "imports": {
+        "react": "https://react.microfrontends.app/deps/npm:react@19.0.0/dev.index.js",
+        "react-dom": "https://react.microfrontends.app/deps/npm:react-dom@19.0.0/dev.index.js",
+        "react-dom/client": "https://react.microfrontends.app/deps/npm:react-dom@19.0.0/dev.client.js",
+        "rxjs": "https://react.microfrontends.app/deps/npm:rxjs@7.8.1/dist/esm5/index.js",
         "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@6.0.3/lib/es2015/esm/single-spa.min.js"
+      },
+      "scopes": {
+        "https://react.microfrontends.app/deps/": {
+          "process": "https://react.microfrontends.app/deps/npm:@jspm/core@2.1.0/nodelibs/browser/process.js",
+          "scheduler": "https://react.microfrontends.app/deps/npm:scheduler@0.25.0/dev.index.js",
+          "tslib": "https://react.microfrontends.app/deps/npm:tslib@2.8.1/tslib.es6.mjs"
+        }
       }
     }
   </script>
@@ -29,7 +40,10 @@
     {
       "imports": {
         "@usp/root-config": "//localhost:9000/usp-root-config.js",
-        "@single-spa/welcome": "https://cdn.jsdelivr.net/npm/single-spa-welcome/dist/single-spa-welcome.min.js"
+        "@single-spa/welcome": "https://cdn.jsdelivr.net/npm/single-spa-welcome/dist/single-spa-welcome.min.js",
+        "@usp/mf-nav": "//localhost:8502/usp-mf-nav.js",
+        "@usp/mf-clientes": "//localhost:8501/usp-mf-clientes.js",
+        "@usp/mf-produtos": "//localhost:8500/usp-mf-produtos.js"
       }
     }
   </script>
